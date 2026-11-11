@@ -6,7 +6,11 @@
 ![Дэшборды с графаны](Grafana-Dashboards.png)
 
 ## Запуск
-
+Сначала нужно сбилдить локальный докер образ приложения.
+```bash
+mvn -P local-docker clean package       
+```
+Затем поднять все контейнеры через docker-compose.
 ```bash
 docker compose up --build -d
 ```

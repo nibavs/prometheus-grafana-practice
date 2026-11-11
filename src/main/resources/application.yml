@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: prometheus_grafana
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
